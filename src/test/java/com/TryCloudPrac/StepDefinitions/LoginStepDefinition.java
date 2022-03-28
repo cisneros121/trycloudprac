@@ -1,6 +1,7 @@
 package com.TryCloudPrac.StepDefinitions;
 
 import com.TryCloudPrac.Pages.LoginPage;
+import com.TryCloudPrac.Utilities.BrowserUtil;
 import com.TryCloudPrac.Utilities.ConfigurationReader;
 import com.TryCloudPrac.Utilities.Driver;
 import com.TryCloudPrac.Utilities.ExplicitWaitMethod;
@@ -47,8 +48,10 @@ public class LoginStepDefinition {
     public void verifyMessageShouldBeDisplayed(String arg0) {
       //  ExplicitWaitMethod.explicitWait().until(ExpectedConditions.visibilityOf(loginPage.errorMessage));
         WebDriverWait wait=new WebDriverWait(Driver.getDriver(),10);
-wait.until(ExpectedConditions.visibilityOf(loginPage.errorMessage));
-        Assert.assertEquals("not equal",arg0 ,loginPage.errorMessage.getText());
+//wait.until(ExpectedConditions.visibilityOf(loginPage.errorMessage));
+        BrowserUtil.sleep(8);
+        Assert.assertTrue("not true",loginPage.errorMessage.isDisplayed());
+        Assert.assertEquals("message is not equal","Wrong username or password.",loginPage.errorMessage.getText());
 
     }
 }
