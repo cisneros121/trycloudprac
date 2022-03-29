@@ -24,6 +24,12 @@ public class LoginPage {
     @FindBy(xpath ="//p[@class='warning wrongPasswordMsg']")
     public WebElement errorMessage;
 
+    public void logIn(){
+        user.sendKeys("user7");
+        password.sendKeys("Userpass123");
+        loginButton.click();
+    }
+
 
 
 

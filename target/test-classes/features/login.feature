@@ -1,3 +1,4 @@
+@smoke
 Feature: As a user, I should be able to log in.
 
   Scenario Outline: Verify login with valid credentials
@@ -11,7 +12,6 @@ Feature: As a user, I should be able to log in.
       | user34   | Userpass123 |
       | user99   | Userpass123 |
 
-  @wip
   Scenario Outline: Verify user login fail with invalid credentials
     Given user on the login page
     When user enter invalid "<username>" and enters "<password>"

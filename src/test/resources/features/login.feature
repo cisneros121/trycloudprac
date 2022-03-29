@@ -1,5 +1,6 @@
+@smoke
 Feature: As a user, I should be able to log in.
-  @wip
+
   Scenario Outline: Verify login with valid credentials
     Given user on the login page
     When user use username "<username>" and password "<password>"
@@ -10,7 +11,6 @@ Feature: As a user, I should be able to log in.
       | user7    | Userpass123 |
       | user34   | Userpass123 |
       | user99   | Userpass123 |
-
 
   Scenario Outline: Verify user login fail with invalid credentials
     Given user on the login page
