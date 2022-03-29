@@ -1,4 +1,4 @@
-@wip
+
 Feature: As a user, I should be able to access to Files module - Favorites button
 
   Scenario: com.google.common.base.Verify users to add files to Favorites
