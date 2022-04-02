@@ -17,4 +17,9 @@ public class ModulesPage {
     @FindBy(xpath = "//a[@aria-label='Files']")
     public WebElement Files;
 
+    @FindBy(xpath = "//div[@class='avatardiv popovermenu-wrapper app-content-list-item-icon avatardiv--unknown']/following-sibling::div[@class='app-content-list-item-line-one']")
+
+    //div[@class='avatardiv popovermenu-wrapper app-content-list-item-icon avatardiv--unknown']/..
+    public List<WebElement> contactList;
+
 }

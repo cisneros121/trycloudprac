@@ -32,7 +32,7 @@ public class EditFilesStepDefinitions {
 
     @When("the user clicks the {string} module")
     public void the_user_clicks_the_module(String string) {
-        System.out.println("point  " + string);
+
         for (WebElement module : modulesPage.modules) {
 
             if (module.getAttribute("innerText").contains(string)) {
