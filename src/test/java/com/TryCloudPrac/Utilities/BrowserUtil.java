@@ -84,6 +84,29 @@ int i=0;
         }
     }
 
+    public static void confirmFileInList(String file,List<WebElement>files){
+
+int i=0;
+EditFilePage editFilePage= new EditFilePage();
+        for (WebElement element : files) {
+
+            if (element.getAttribute("innerText").equals(file)){
+                Assert.assertEquals(file,element.getAttribute("innerText"));
+                editFilePage.actions.get(i);
+                BrowserUtil.sleep(3);
+                WebDriverWait wait=new WebDriverWait(Driver.getDriver(),20);
+                wait.until(ExpectedConditions.visibilityOf(editFilePage.deletedFile)).click();
+                editFilePage.deletedFile.click();
+                break;
+            }
+            i++;
+
+        }
+        System.err.println("Assertion in confirmFileInList Failed");
+
+
+    }
+
 
 
 }

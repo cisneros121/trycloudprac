@@ -56,6 +56,17 @@ public class EditFilePage {
     @FindBy(xpath = "//a[@class='name']/span[@class='nametext']")
     public List<WebElement> fileNames;
 
+    @FindBy(xpath = "(//a[@class='menuitem'])[1]")
+    public WebElement newFolder;
+
+    @FindBy(xpath = "//input[@id='view13-input-folder']")
+    public WebElement newFolderTextBox;
+
+    @FindBy(xpath = "(//input[@type='submit'])[2]")
+    public WebElement submitBtn;
+
+
+
 
     //Readme
 
