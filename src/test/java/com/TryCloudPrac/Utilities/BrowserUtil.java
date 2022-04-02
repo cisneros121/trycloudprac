@@ -73,7 +73,9 @@ int returnNum=0;
 int i=0;
         for (WebElement fileName : files) {
             if (fileName.getText().equals(file)){
-                System.out.println("DeletingFile");
+                System.out.println("Asserting if file is contained");
+                Assert.assertEquals(file,fileName.getText());
+                System.out.println("assert passed now deleting file");
                 editFilePage.actions.get(i).click();
                 WebElement a= Driver.getDriver().findElement(By.xpath("//a[@class='menuitem action action-delete permanent']"));
                 BrowserUtil.sleep(3);
@@ -88,16 +90,22 @@ int i=0;
 
 int i=0;
 EditFilePage editFilePage= new EditFilePage();
-        for (WebElement element : files) {
 
-            if (element.getAttribute("innerText").equals(file)){
-                Assert.assertEquals(file,element.getAttribute("innerText"));
-                editFilePage.actions.get(i);
+        for (WebElement element : files) {
+            System.out.println(element.getText());
+            if (element.getText().equals(file)){
+                System.out.println("asserting");
+                Assert.assertEquals(file,element.getText());
+                editFilePage.actions.get(i).click();
                 BrowserUtil.sleep(3);
                 WebDriverWait wait=new WebDriverWait(Driver.getDriver(),20);
-                wait.until(ExpectedConditions.visibilityOf(editFilePage.deletedFile)).click();
-                editFilePage.deletedFile.click();
-                break;
+               // wait.until(ExpectedConditions.visibilityOf(editFilePage.deletedFile)).click();
+                System.out.println("deleted newly created file");
+                WebElement a= Driver.getDriver().findElement(By.xpath("//span[.='Delete folder']/.."));
+                a.click();
+                return;
+
+                //span[.='Delete file']
             }
             i++;
 
