@@ -1,4 +1,4 @@
-
+@smoke
 Feature: As a user, I should be able to access to Files module - Favorites button
 
   Scenario: com.google.common.base.Verify users to add files to Favorites
@@ -16,6 +16,8 @@ Feature: As a user, I should be able to access to Files module - Favorites butto
     And  user choose the "Remove from favorites" option
     And user click the "Favorites" sub-module on the left side
     Then Verify that the file is removed from the Favorites sub-module’s table
+
+
 
   Scenario: verify users to upload a file from Files
     Given user on the dashboard page

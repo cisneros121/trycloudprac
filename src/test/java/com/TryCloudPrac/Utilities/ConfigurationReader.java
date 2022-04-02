@@ -25,5 +25,8 @@ public class ConfigurationReader {
 
     public static String getProperty(String key) { return properties.getProperty(key); }
 
-
+    public static int getNumber(String keyword){
+        String current = properties.getProperty(keyword);
+        return Integer.parseInt(current);
+    }
 }

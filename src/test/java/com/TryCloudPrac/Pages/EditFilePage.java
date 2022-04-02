@@ -35,6 +35,28 @@ public class EditFilePage {
     @FindBy(xpath = "//label[@for='file_upload_start']")
     public WebElement uploadButton;
 
+    @FindBy(xpath = "//a[.='Deleted files']")
+    public WebElement deletedFile;
+
+    @FindBy(xpath = "//span[@class='nametext extra-data']")
+    public List<WebElement> deletedFiles;
+
+    @FindBy(xpath = "//a[.='Deleted']")
+    public WebElement deleteSort;
+
+    @FindBy(xpath = "//input[@id='file_upload_start']")
+    public WebElement upload;
+
+    @FindBy (xpath = "//div[@id='uploadprogressbar']")
+    public WebElement uploadBar;
+
+    @FindBy(xpath = "//div[@class='toastify on dialogs error toastify-right toastify-top']/span")
+    public WebElement notEnoughSpaceBtn;
+
+    @FindBy(xpath = "//a[@class='name']/span[@class='nametext']")
+    public List<WebElement> fileNames;
+
+
     //Readme
 
 }

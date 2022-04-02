@@ -14,11 +14,12 @@ import org.junit.runner.RunWith;
                 , "rerun:target/failedTest.txt"}, // target file comes up even if i change name cucumber-report is file name
         features = "src/test/resources/features",
         glue = "com/TryCloudPrac/StepDefinitions",
-        dryRun = false, publish = true, tags = "@wip"
+        dryRun = true, publish = true, tags = "@wip"
 
 
 )
 public class CukesRunner {
+
 
 
 }
