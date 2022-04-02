@@ -12,6 +12,7 @@ public class Hooks {
     @Before
     public void loginPage(){
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+        //scared
     }
 
     @After
